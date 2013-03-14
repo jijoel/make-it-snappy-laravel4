@@ -1,0 +1,8 @@
+{
+	"folders":
+	[
+        { "path": "/C/wamp/www/test/app" },
+        { "path": "/C/wamp/www/test/public" },
+		{ "path": "/C/wamp/www/test" }
+	]
+}
