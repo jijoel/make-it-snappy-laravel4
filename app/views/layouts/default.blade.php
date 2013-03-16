@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ $title }}</title>
-    {{ HTML::style('css/main.css') }}
+    <link href="{{route('home')}}/css/main.css" media="all" type="text/css" rel="stylesheet">
 </head>
 <body>
     
@@ -13,7 +13,7 @@
             <div id="searchbar">
                 {{ Form::open(array('route'=>'search')) }}
                 {{ Form::token() }}
-                {{ Form::text('keyword', '', array('id'=>'keyword', 'placeholder'=>'Search')) }}
+                {{ Form::text('keyword', '', array('id'=>'keyword', 'autofocus'=>'True', 'placeholder'=>'Search')) }}
                 {{ Form::submit('Search') }}
                 {{ Form::close() }}
             </div>

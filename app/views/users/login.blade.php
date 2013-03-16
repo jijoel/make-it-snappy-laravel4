@@ -7,7 +7,7 @@
 
     <p>
         {{ Form::label('username', 'Username')}}<br />
-        {{ Form::text('username', Input::old('username')) }}
+        {{ Form::text('username', Input::old('username'), array("autofocus"=>"True")) }}
     </p>
     <p>
         {{ Form::label('password', 'Password')}}<br />

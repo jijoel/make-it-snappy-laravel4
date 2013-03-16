@@ -127,8 +127,8 @@ class QuestionController extends BaseController {
 	{
 		$keyword = Input::get('keyword');
 		if (empty($keyword)) {
-			return View::back()
-				->with('message', 'No keyword entered, please try again');
+			 return Redirect::back()
+			 	->with('message', 'No keyword entered, please try again');
 		}
 		return Redirect::to('results/'.$keyword);
 	}

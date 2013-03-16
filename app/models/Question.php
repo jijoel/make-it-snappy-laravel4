@@ -31,6 +31,8 @@ class Question extends BaseModel {
 
     public static function search($keyword)
     {
-        return static::where('question', 'like', '%'.$keyword.'%')->paginate(3);
+        return static::where('question', 'like', '%'.$keyword.'%')
+            ->orderBy('updated_at', 'ASC')            
+            ->paginate(3);
     }
 }

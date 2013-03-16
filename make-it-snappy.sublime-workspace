@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"que",
+				"questionBelongsToUser"
+			],
+			[
 				"Html",
 				"HTML	Laravel: HTML::span()"
 			],
@@ -23,9 +27,73 @@
 	"build_system": "Packages/User/php.sublime-build",
 	"command_palette":
 	{
-		"height": 150.0,
+		"height": 219.0,
 		"selected_items":
 		[
+			[
+				"sort",
+				"Sort Lines"
+			],
+			[
+				"todo",
+				"Show TODOs: Project and open files"
+			],
+			[
+				"tidi",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"show",
+				"Show TODOs: Project and open files"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"blade",
+				"Set Syntax: PHP - Laravel Blade"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"gita d",
+				"Git: Add..."
+			],
+			[
+				"git",
+				"Git: Toggle Annotations"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"gitg",
+				"Git: Gui"
+			],
+			[
+				"git ",
+				"Git: Commit"
+			],
+			[
+				"rena",
+				"File: Rename"
+			],
+			[
+				"prefer",
+				"Preferences: Key Bindings - User"
+			],
 			[
 				"lara",
 				"Set Syntax: PHP - Laravel Blade"
@@ -53,10 +121,6 @@
 			[
 				"pro",
 				"Project: Edit"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"project",
@@ -91,7 +155,7 @@
 				"Snippet: html"
 			]
 		],
-		"width": 512.0
+		"width": 456.0
 	},
 	"console":
 	{
@@ -108,8 +172,101 @@
 	},
 	"file_history":
 	[
+		"/C/wamp/www/test/app/tests/functional/F_InterfaceTest.php",
+		"/C/wamp/www/test/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Tests/CrawlerTest.php",
+		"/C/wamp/www/test/app/routes.php",
+		"/C/wamp/www/test/app/models/Question.php",
+		"/C/wamp/www/test/app/controllers/QuestionController.php",
+		"/C/wamp/www/shop/phpunit.xml",
+		"/C/wamp/www/test/app/database/migrations/2013_03_13_053830_create_questions_table.php",
+		"/C/wamp/www/test/app/ide_helper.php",
+		"/C/wamp/www/test/app/config/app.php",
+		"/C/wamp/www/test/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Crawler.php",
+		"/C/wamp/www/test/app/tests/functional/F_Interface.php",
+		"/C/wamp/www/test/app/tests/controllers/QuestionControllerTest.php",
+		"/C/wamp/www/test/app/config/session.php",
+		"/C/wamp/www/test/vendor/laravel/framework/src/Illuminate/Session/SessionServiceProvider.php",
+		"/C/wamp/www/test/make-it-snappy.sublime-project",
+		"/C/wamp/www/test/app/views/users/login.blade.php",
+		"/C/wamp/www/test/app/views/users/create.blade.php",
+		"/C/wamp/www/test/app/views/layouts/default.blade.php",
+		"/C/wamp/www/test/phpunit.xml",
+		"/C/wamp/www/test/app/tests/controllers/UserControllerTest.php",
+		"/C/wamp/www/test/app/tests/TestCase.php",
+		"/C/wamp/www/test/app/app/tests/functional/F_Interface.php",
+		"/C/wamp/www/test.v1/composer.json",
+		"/C/wamp/www/test/app/controllers/AnswerController.php",
+		"/C/wamp/www/test/app/tests/controllers/AnswersControllerTest.php",
+		"/C/wamp/www/test/app/config/testing/cache.php",
+		"/C/wamp/www/test/app/database/seeds/AnswersTableSeeder.php",
+		"/C/wamp/www/test/app/config/auth.php",
+		"/C/wamp/www/test/app/database/migrations/2013_03_08_192422_create_users_table.php",
+		"/C/wamp/www/test/app/models/Answer.php",
+		"/C/wamp/www/test/app/models/User.php",
+		"/C/wamp/www/test/app/models/Answers.php",
+		"/C/wamp/www/test/app/models/Questions.php",
+		"/C/wamp/www/test/app/models/Users.php",
+		"/C/wamp/www/test/app/views/questions/results.blade.php",
+		"/C/wamp/www/test/app/controllers/QuestionsController.php",
+		"/C/wamp/www/test/app/views/questions/create.blade.php",
+		"/C/wamp/www/test/app/views/questions/index.blade.php",
 		"/C/wamp/www/test/app/controllers/UsersController.php",
+		"/C/wamp/www/test/app/controllers/AnswersController.php",
+		"/C/wamp/www/test/app/views/questions/show.blade.php",
+		"/C/wamp/www/test/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/BelongsTo.php",
+		"/C/wamp/www/test/app/views/questions/edit.blade.php",
+		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/Blade Snippets/README.md",
+		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/Blade Snippets/blade-yield.sublime-snippet",
+		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/Blade Snippets/blade-if_else.sublime-snippet",
+		"/C/wamp/www/test/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php",
+		"/C/wamp/www/test/app/views/questions/your_questions.blade.php",
+		"/C/wamp/www/test/app/database/migrations/2013_03_14_031251_create_answers_table.php",
+		"/C/wamp/www/test/app/models/BaseModel.php",
+		"/C/wamp/www/test/vendor/laravel/framework/src/Illuminate/Database/Migrations/stubs/update.php",
+		"/C/wamp/www/test/vendor/laravel/framework/src/Illuminate/Html/FormBuilder.php",
+		"/C/wamp/www/test/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php",
+		"/C/wamp/www/test/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+		"/C/wamp/www/test/vendor/laravel/framework/src/Illuminate/Routing/RoutingServiceProvider.php",
+		"/C/wamp/www/docs/tutorials/Build a Practical Web Application in Laravel/makeitsnappy/application/routes.php",
+		"/C/wamp/www/test/server.php",
+		"/C/wamp/www/test/app/database/seeds/QuestionsTableSeeder.php",
+		"/C/wamp/www/test/app/database/seeds/UsersTableSeeder.php",
+		"/C/wamp/www/test/app/database/seeds/DatabaseSeeder.php",
+		"/C/wamp/www/test/make-it-snappy.sublime-workspace",
+		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/SublimeTODO/Default (Linux).sublime-keymap",
+		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/SublimeTODO/README.markdown",
+		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/SublimeTODO/todo.py",
+		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/SublimeTODO/Default.sublime-commands",
+		"/C/wamp/www/test/app/filters.php",
+		"/C/wamp/www/test/app/views/users/index.blade.php",
+		"/C/wamp/www/test/app/tests/LoginTest.php",
+		"/C/wamp/www/test/app/database/seeds/UserTableSeeder.php",
+		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/User/EOL_Semicolon.sublime-macro",
+		"/C/wamp/www/test/app/database/migrations/2013_03_13_054829_create_users_table.php",
+		"/C/wamp/www/test/app/database/migrations/2013_03_08_193658_create_urls_table.php",
+		"/C/wamp/www/test/app/database/migrations/2013_03_13_053946_create_questions_table.php",
+		"/C/wamp/www/test/vendor/laravel/framework/src/Illuminate/Support/Facades/Route.php",
+		"/C/wamp/www/test/vendor/laravel/framework/src/Illuminate/Support/MessageBag.php",
+		"/C/wamp/www/test/vendor/jonob/html/src/Jonob/HTML/HTML.php",
+		"/C/wamp/www/test/vendor/laravel/framework/src/Illuminate/Auth/UserInterface.php",
+		"/C/wamp/www/test/vendor/laravel/framework/src/Illuminate/Auth/Reminders/RemindableInterface.php",
+		"/C/wamp/www/test/app/views/x.hello.blade.php",
+		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/Git/Git.sublime-settings",
+		"/C/wamp/www/test/composer.json",
+		"/C/wamp/www/test/app/changes.txt",
+		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/AdvancedNewFile/README.md",
+		"/C/wamp/www/test/app/views/question/index.blade.php",
+		"/C/wamp/www/test/app/views/hello.blade.php",
+		"/C/wamp/www/test/app/controllers/BaseController.php",
+		"/C/wamp/www/test/app/controllers/questions.php",
+		"/C/wamp/www/test/app/controllers/make-it-snappy.sublime-workspace",
+		"/C/wamp/www/test/app/database/install.sql",
+		"/C/wamp/www/test/app/config/database.php",
 		"/C/wamp/www/test/app/views/hello.php",
+		"/C/wamp/www/test/app/app/views/layouts/default.blade.php",
 		"/C/wamp/www/test/test.sublime-project",
 		"/C/wamp/www/test/app/controllers/views/test2.blade.php",
 		"/C/wamp/www/test/app/views/test.blade.php",
@@ -121,8 +278,6 @@
 		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/User/Emmet.sublime-settings",
 		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/SideBarEnhancements/Side Bar.sublime-settings",
 		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/User/php.sublime-build",
-		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/C/wamp/www/test/public/css/joel.css",
 		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Installed Packages/Package Control.sublime-package",
 		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/Emmet/Default (Windows).sublime-keymap",
@@ -132,7 +287,6 @@
 		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/Laravel Snippets/Auth-check.sublime-snippet",
 		"/C/Users/Joel/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
 		"/C/wamp/www/test/app/controllers/HomeController.php",
-		"/C/wamp/www/test/phpunit.xml",
 		"/C/wamp/www/test/.project"
 	],
 	"find":
@@ -148,9 +302,32 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"input",
+			"var_dump(",
+			"    public function user()\n    {\n        return $this->belongsTo('Users');\n    }\n",
+			"UsersController",
+			"username",
+			"    <p>\n        {{ Form::label('username', 'Username')}}<br />\n        {{ Form::text('username', Input::old('username')) }}\n    </p>\n",
+			"register",
+			"pw_confirmation",
+			"password_confirmation",
+			"password",
+			"text",
+			"li",
+			"}}</",
+			"username",
+			"to_route",
+			"@token",
+			"HTML::link_to_route",
+			"username",
+			"service pro",
+			"read_it_later",
+			"to",
+			"link",
+			"Html",
 			"\" _\n",
 			",  \n",
 			",",
@@ -214,6 +391,10 @@
 	{
 		"height": 142.0
 	},
+	"output.git":
+	{
+		"height": 142.0
+	},
 	"replace":
 	{
 		"height": 62.0
@@ -224,6 +405,194 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"cra",
+				"test/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Tests/CrawlerTest.php"
+			],
+			[
+				"craw",
+				"test/vendor/symfony/dom-crawler/Symfony/Component/DomCrawler/Crawler.php"
+			],
+			[
+				"sess",
+				"test/vendor/laravel/framework/src/Illuminate/Session/SessionServiceProvider.php"
+			],
+			[
+				"session",
+				"test/vendor/laravel/framework/src/Illuminate/Session/SessionServiceProvider.php"
+			],
+			[
+				"ques",
+				"app/controllers/QuestionsController.php"
+			],
+			[
+				"question",
+				"app/controllers/QuestionsController.php"
+			],
+			[
+				"index.bl",
+				"app/views/questions/index.blade.php"
+			],
+			[
+				"def",
+				"app/views/layouts/default.blade.php"
+			],
+			[
+				"belongs",
+				"test/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/BelongsTo.php"
+			],
+			[
+				"quest",
+				"app/controllers/QuestionsController.php"
+			],
+			[
+				"quesind",
+				"app/views/questions/index.blade.php"
+			],
+			[
+				"users",
+				"app/controllers/UsersController.php"
+			],
+			[
+				"usersc",
+				"app/controllers/UsersController.php"
+			],
+			[
+				"questi",
+				"app/models/Questions.php"
+			],
+			[
+				"answer",
+				"app/models/Answers.php"
+			],
+			[
+				"your",
+				"app/views/questions/your_questions.blade.php"
+			],
+			[
+				"eloquentmodel",
+				"test/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php"
+			],
+			[
+				"bas",
+				"app/models/BaseModel.php"
+			],
+			[
+				"q",
+				"app/models/Questions.php"
+			],
+			[
+				"stubupdate",
+				"test/vendor/laravel/framework/src/Illuminate/Database/Migrations/stubs/update.php"
+			],
+			[
+				"que",
+				"app/models/Questions.php"
+			],
+			[
+				"form",
+				"test/vendor/laravel/framework/src/Illuminate/Html/FormBuilder.php"
+			],
+			[
+				"url",
+				"test/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php"
+			],
+			[
+				"route",
+				"test/vendor/laravel/framework/src/Illuminate/Routing/Router.php"
+			],
+			[
+				"resourource",
+				"test/vendor/laravel/framework/src/Illuminate/Routing/RoutingServiceProvider.php"
+			],
+			[
+				"userscontroller.php",
+				"test/app/controllers/UsersController.php"
+			],
+			[
+				"userscre",
+				"app/views/users/create.blade.php"
+			],
+			[
+				"user",
+				"app/controllers/UsersController.php"
+			],
+			[
+				"migrque",
+				"test/app/database/migrations/2013_03_13_053830_create_questions_table.php"
+			],
+			[
+				"migraque",
+				"app/database/migrations/2013_03_13_053830_create_questions_table.php"
+			],
+			[
+				"usercrea",
+				"app/views/users/create.blade.php"
+			],
+			[
+				"userinde",
+				"app/views/users/index.blade.php"
+			],
+			[
+				"create_q",
+				"app/database/migrations/2013_03_13_053830_create_questions_table.php"
+			],
+			[
+				"rou",
+				"test/vendor/laravel/framework/src/Illuminate/Support/Facades/Route.php"
+			],
+			[
+				"formbuil",
+				"test/vendor/laravel/framework/src/Illuminate/Html/FormBuilder.php"
+			],
+			[
+				"messageb",
+				"test/vendor/laravel/framework/src/Illuminate/Support/MessageBag.php"
+			],
+			[
+				"eloquent",
+				"test/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php"
+			],
+			[
+				"filters",
+				"app/filters.php"
+			],
+			[
+				"formbui",
+				"test/vendor/laravel/framework/src/Illuminate/Html/FormBuilder.php"
+			],
+			[
+				"urlge",
+				"test/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php"
+			],
+			[
+				"html",
+				"test/vendor/jonob/html/src/Jonob/HTML/HTML.php"
+			],
+			[
+				"userinter",
+				"test/vendor/laravel/framework/src/Illuminate/Auth/UserInterface.php"
+			],
+			[
+				"remindabl",
+				"test/vendor/laravel/framework/src/Illuminate/Auth/Reminders/RemindableInterface.php"
+			],
+			[
+				"viewquin",
+				"test/app/views/questions/index.blade.php"
+			],
+			[
+				"compo",
+				"test/composer.json"
+			],
+			[
+				"basecon",
+				"app/controllers/BaseController.php"
+			],
+			[
+				"routes",
+				"app/routes.php"
+			]
 		],
 		"width": 0.0
 	},
@@ -239,6 +608,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 209.0,
+	"side_bar_width": 332.0,
 	"status_bar_visible": true
 }

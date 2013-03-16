@@ -111,7 +111,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
-		'Jonob\HTML\HTMLServiceProvider',
+		// 'Jonob\HTML\HTMLServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
 	),
 
@@ -178,7 +178,7 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 
-		'HTML' => 'Jonob\HTML\HTMLFacade',
+//		'HTML' => 'Jonob\HTML\HTMLFacade',
 
 	),
 
