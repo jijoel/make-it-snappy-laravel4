@@ -5,7 +5,7 @@ class AnswerController extends BaseController {
 
 	public function __construct()
 	{
-		$this->beforeFilter('auth', ['only' => ['store']]);
+		$this->beforeFilter('auth', array('only' => array('store')));
 	}
 
 	/**

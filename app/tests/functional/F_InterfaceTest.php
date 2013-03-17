@@ -39,7 +39,8 @@ class InterfaceTest extends TestCase {
 
         $form = $crawler->selectButton('Search')->form();
         $form['keyword'] = 'one';
-        var_dump($form);
+//        var_dump($form);
+
 //        $client->submit($form);
 
         // $crawler = $client->followRedirect();

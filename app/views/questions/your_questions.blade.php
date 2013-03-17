@@ -11,8 +11,8 @@
                 <li>
                     {{ Str::limit(e($question->question),40) }} -
                     {{ ($question->solved) ? "(solved) - " : "" }}
-                    <a href="{{ route('questions.show', ['questions'=>$question->id]) }}">View</a> - 
-                    <a href="{{ route('questions.edit', ['questions'=>$question->id]) }}">Edit</a> 
+                    <a href="{{ route('questions.show', array('questions'=>$question->id)) }}">View</a> - 
+                    <a href="{{ route('questions.edit', array('questions'=>$question->id)) }}">Edit</a> 
                 </li>
             @endforeach
         </ul>

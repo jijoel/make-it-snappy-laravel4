@@ -1,5 +1,13 @@
 <?php
 
+$environments = array(
+
+	'local' => array('http://localhost*', 'http://test', '*.dev'),
+//	'testing' => array('http://www.*', '*.exampledomain.com'),
+//	'production' => array('http://www.productionName.com*')
+);
+
+
 return array(
 
 	/*

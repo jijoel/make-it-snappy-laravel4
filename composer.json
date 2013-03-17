@@ -1,7 +1,7 @@
 {
 	"require": {
 		"laravel/framework": "4.0.*",
-		"jonob/html": "dev-master",
+        "mockery/mockery": "dev-master",
 		"way/generators": "dev-master"
 	},
 	"autoload": {
@@ -11,7 +11,8 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
-			"app/tests/TestCase.php"
+			"app/library",
+			"app/tests"
 		]
 	},
 	"minimum-stability": "dev"

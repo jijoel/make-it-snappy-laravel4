@@ -33,7 +33,7 @@
         <ul>
             @foreach($questions as $question)
                 <li>
-                    <a href="{{ route('questions.show', ['questions' => $question->id]) }}">
+                    <a href="{{ route('questions.show', array('questions' => $question->id)) }}">
                         {{ e(Str::limit($question->question,40)) }}
                     </a> 
                     by {{ ucfirst($question->user->username) }}

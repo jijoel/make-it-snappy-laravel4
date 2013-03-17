@@ -4,13 +4,13 @@ class QuestionController extends BaseController {
 
 	public function __construct()
 	{
-		$this->beforeFilter('auth', [
-			'only' => [
+		$this->beforeFilter('auth', array(
+			'only' => array(
 				'edit', 
 				'indexYourQuestions', 
 				'store', 
 				'update'
-		]]);
+		)));
 	}
 
 	/**

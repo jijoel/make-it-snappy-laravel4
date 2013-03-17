@@ -29,3 +29,6 @@ return array(
 	'pagination' => 'pagination::slider',
 
 );
+
+// setContentTags('##', '##'); 
+// Blade::setContentTags('###', '###');  // maybe in route file, or start file?

@@ -8,7 +8,7 @@
         <ul>
             @foreach($questions as $question)
             <li>
-                <a href="{{ route('questions.show', ['questions'=>$question->id]) }}">
+                <a href="{{ route('questions.show', array('questions'=>$question->id)) }}">
                     {{ $question->question }}
                 </a>
                 by {{ ucfirst($question->user->username) }}

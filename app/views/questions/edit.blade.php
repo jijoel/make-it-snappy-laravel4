@@ -11,7 +11,7 @@
         </ul>
     @endif
 
-    {{ Form::open(array('url' => route('questions.update', ['questions'=>$question->id]),
+    {{ Form::open(array('url' => route('questions.update', array('questions'=>$question->id)),
         'method' => 'PUT')) }}
     {{ Form::token() }}
 
