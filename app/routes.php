@@ -26,3 +26,5 @@ Route::post('search', array('as'=>'search', 'before'=>'csrf',
 Route::resource('questions', 'QuestionController');
 Route::resource('users', 'UserController');
 Route::resource('answers', 'AnswerController');
+
+

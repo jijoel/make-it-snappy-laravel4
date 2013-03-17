@@ -15,6 +15,7 @@ class InterfaceTest extends TestCase {
 
     public function test_request_homepage()
     {
+        $this->loadDatabase();
         $crawler = $this->client->request('GET', '/');
         $this->assertTrue($this->client->getResponse()->isOk(), 'should have OK response');
         $this->assertEquals('ask a question', strtolower($crawler->filterXPath('//h1')->text()),
@@ -33,6 +34,7 @@ class InterfaceTest extends TestCase {
 
     public function test_homepage_search()
     {
+        $this->loadDatabase();
         $crawler = $this->client->request('GET', '/');
         $this->assertTrue($this->client->getResponse()->isOk(), 'should have OK response');
         $content = $this->client->getResponse()->getContent();

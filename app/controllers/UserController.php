@@ -2,6 +2,11 @@
 
 class UserController extends BaseController {
 
+    // public function __construct(User $user) 
+    // {
+    //     $this->user = $user;
+    // }
+
     /**
      * Show the form for creating a new resource.
      *

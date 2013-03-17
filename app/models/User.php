@@ -3,7 +3,8 @@
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class User extends BaseModel implements UserInterface, RemindableInterface
+class User extends BaseModel 
+implements UserInterface, RemindableInterface //, UserRepositoryInterface
 {
     public static $rules = array(
         'username' => 'required|unique:users|alpha_dash|min:4',

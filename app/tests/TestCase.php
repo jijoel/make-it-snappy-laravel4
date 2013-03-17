@@ -19,10 +19,9 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase {
         return require __DIR__.'/../../bootstrap/start.php';
     }
 
-    public function setUp()
+    public function loadDatabase()
     {
-        parent::setUp();
         Artisan::call('migrate');
-        $this->seed();
+        $this->seed();        
     }
 }

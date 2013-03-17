@@ -13,7 +13,7 @@ class BaseModel extends Eloquent
     //     $this->validator = $validator;
     // }
 
-    public static function validate($data)
+    public function validate($data)
     {
         // return $this->validator->make($data, static::$rules);
         return Validator::make($data, static::$rules);
