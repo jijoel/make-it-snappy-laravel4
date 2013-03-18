@@ -3,10 +3,6 @@
 class UserControllerTest extends TestCase 
 {
 
-    public function __construct()
-    {
-
-    }
 
 	public function testCreate()
 	{

@@ -65,5 +65,13 @@ implements UserInterface, RemindableInterface //, UserRepositoryInterface
     {
         return $this->hasMany('Answer');
     }
+
+    public function validateField($field, $data)
+    {
+        // return $this->validator->make($data, static::$rules);
+        return Validator::make($data, static::$rules);
+    } 
+
+
 }
 

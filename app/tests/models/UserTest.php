@@ -53,33 +53,34 @@ Class UserTest extends TestCase
         $this->assertEquals(3, count($questions));
     }
 
-    public function testValidation()
-    {
-        $this->markTestIncomplete();
-
-        $mock = Mockery::mock('ValidationServiceProvider');
-        $mock->shouldReceive('make')->once()->andReturn(False);
-        $app['validator'] = $mock;
-
-        $user = new User;
-        $this->assertFalse($user->validate(array('test')));
-
-        // $m = Mockery::mock('ValidationServiceProvider');
-        // $m->shouldReceive('make')->with(1, 2)->once()->andReturn(False);
-        // $this->app->instance('ValidationServiceProvider', $m);
-
-        // $user = new User;
-        // $this->assertFalse($user->validate(array('test')));
-    }
-
-    public function testQuestions()
+    public function testSeededUserAnswers()
     {
         $this->loadDatabase();
-        $user = new User;
-    	$questions = $user->questions();
-        echo(count($questions));
-        // foreach($questions as $question)
-        //     var_dump($question);
+        $answers = User::find(1)->answers()->get();
+        $this->assertEquals(1, count($answers));
+
+        $answers = User::find(2)->answers()->get();
+        $this->assertEquals(1, count($answers));
+
+        $answers = User::find(3)->answers()->get();
+        $this->assertEquals(0, count($answers));
     }
+
+    public function testValidate()
+    {
+        $user = new User;
+        $validation = $user->validate(array('username'=>Null));
+        $this->assertFalse($validation->passes());
+        $e = $validation->getMessageBag();
+        $this->assertEquals(3, count($e));
+        // use this to see the actual messages
+        var_dump($e->all(':message'));
+    }
+
+    public function testValidateField()
+    {
+        
+    }
+
 }
 
