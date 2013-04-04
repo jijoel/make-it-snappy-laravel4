@@ -2,7 +2,7 @@
 	"require": {
 		"laravel/framework": "4.0.*",
         "mockery/mockery": "dev-master",
-		"way/generators": "dev-master"
+        "way/generators": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
@@ -11,9 +11,11 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
-			"app/library",
-			"app/tests"
+			"app/tests/TestCase.php"
 		]
+	},
+	"scripts": {
+		"post-update-cmd": "php artisan optimize"
 	},
 	"minimum-stability": "dev"
 }
