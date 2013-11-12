@@ -4,29 +4,24 @@ class UsersTableSeeder extends Seeder {
 
 	public function run()
 	{
-		$users = array(
-            array(
-                'username' => 'joel',
-                'password' => Hash::make('test'),
-                'created_at' => new DateTime,
-                'updated_at' => new DateTime
-            ),
-            array(
-                'username' => 'test1',
-                'password' => Hash::make('test'),
-                'created_at' => new DateTime,
-                'updated_at' => new DateTime
-            ),
-            array(
-                'username' => 'test2',
-                'password' => Hash::make('test'),
-                'created_at' => new DateTime,
-                'updated_at' => new DateTime
-            ),
-
+        $data = array(
+            array(1, 'joel', 'test'),
+            array(2, 'test1', 'test'),
+            array(3, 'test2', 'test'),
 		);
 
-		DB::table('users')->insert($users);
+        $items = array();
+        foreach($data as $item) {
+            $items[] = array(
+                'id'         => $item[0],
+                'username'   => $item[1],
+                'password'   => Hash::make($item[2]),
+                'created_at' => new DateTime,
+                'updated_at' => new DateTime,
+            );
+        }
+
+		DB::table('users')->insert($items);
 	}
 
 }

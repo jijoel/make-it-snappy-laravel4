@@ -11,8 +11,8 @@
 |
 */
 
-
 Route::get('/', array('as'=>'home', 'uses'=>'QuestionController@index'));
+
 Route::get('login', array('as'=>'login', 'uses'=>'UserController@getLogin'));
 Route::get('logout', array('as'=>'logout', 'uses'=>'UserController@getLogout'));
 Route::get('your-questions', array('as'=>'your_questions', 
@@ -23,8 +23,13 @@ Route::post('login', array('before'=>'csrf', 'uses'=>'UserController@postLogin')
 Route::post('search', array('as'=>'search', 'before'=>'csrf', 
     'uses'=>'QuestionController@postSearch'));
 
-Route::resource('questions', 'QuestionController');
-Route::resource('users', 'UserController');
-Route::resource('answers', 'AnswerController');
+Route::resource('questions', 'QuestionController', array(
+    'except'=>array('create','destroy')));
+
+Route::resource('users', 'UserController', array(
+    'only'=>array('create','store')));
+
+Route::resource('answers', 'AnswerController', array(
+    'only'=>array('store')));
 
 

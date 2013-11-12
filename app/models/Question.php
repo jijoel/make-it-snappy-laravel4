@@ -1,6 +1,7 @@
 <?php
 
-class Question extends BaseModel {
+class Question extends BaseModel 
+{
     public static $rules = array(
         'question' => 'required|min:10|max:255',
         'solved' => 'in:0,1'

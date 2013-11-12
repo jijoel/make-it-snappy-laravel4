@@ -1,6 +1,7 @@
 <?php
 
-class TestCase extends Illuminate\Foundation\Testing\TestCase {
+class TestCase extends Illuminate\Foundation\Testing\TestCase 
+{
 
 	/**
 	 * Creates the application.
@@ -11,9 +12,13 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase {
 	{
 		$unitTesting = true;
 
-		$testEnvironment = 'testing';
+		$testEnvironment = 'test-foo';
 
 		return require __DIR__.'/../../bootstrap/start.php';
 	}
 
+	public function tearDown()
+	{
+		\Mockery::close();
+	}
 }

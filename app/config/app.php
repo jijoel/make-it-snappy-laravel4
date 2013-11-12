@@ -2,8 +2,6 @@
 
 return array(
 
-	'load_failing_tests' => false,
-
 	/*
 	|--------------------------------------------------------------------------
 	| Application Debug Mode
@@ -112,8 +110,9 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
-		// 'Jonob\HTML\HTMLServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
+
+		'RoutingServiceProvider',
 	),
 
 	/*
@@ -178,8 +177,6 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-
-//		'HTML' => 'Jonob\HTML\HTMLFacade',
 
 	),
 

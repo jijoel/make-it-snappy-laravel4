@@ -1,11 +1,13 @@
 <?php
 
-class UserController extends BaseController {
+class UserController extends BaseController 
+{
+    protected $user;
 
-    // public function __construct(User $user) 
-    // {
-    //     $this->user = $user;
-    // }
+    public function __construct(User $user) 
+    {
+        $this->user = $user;
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -25,21 +27,21 @@ class UserController extends BaseController {
      */
     public function store()
     {
-        $validation = User::validate(Input::all());
+        $validation = $this->user->validate(Input::all());
         if ($validation->passes()) {
-            User::create(array(
+            $this->user->create(array(
                 'username' => Input::get('username'),
                 'password' => Hash::make(Input::get('password'))
             ));
 
-            $user = User::where('username', '=', Input::get('username'))->first();
+            $user = $this->user->where('username', '=', Input::get('username'))->first();
             Auth::login($user);
 
             return Redirect::route('home')
                 ->with('message', 'Thank you for registering. '
                     .'You are now logged in as '.Input::get('username').'.');
         }
-        return Redirect::back()
+        return Redirect::back(action('UserController@create'))
             ->withErrors($validation)
             ->withInput();
     }

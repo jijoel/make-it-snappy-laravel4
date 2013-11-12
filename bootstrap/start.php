@@ -30,6 +30,15 @@ $env = $app->detectEnvironment(array(
 
 ));
 
+if (isset($_SERVER['HTTP_USER_AGENT'])
+    && strpos($_SERVER['HTTP_USER_AGENT'], 'PhantomJS')) 
+{
+    $env = 'testing';
+}
+
+    $env = 'testing';
+
+
 /*
 |--------------------------------------------------------------------------
 | Bind Paths

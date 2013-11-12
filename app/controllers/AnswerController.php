@@ -1,11 +1,13 @@
 <?php
 
-class AnswerController extends BaseController {
+class AnswerController extends BaseController 
+{
+	protected $answer;
 
-
-	public function __construct()
+	public function __construct(Answer $answer)
 	{
 		$this->beforeFilter('auth', array('only' => array('store')));
+		$this->answer = $answer;
 	}
 
 	/**
@@ -15,11 +17,11 @@ class AnswerController extends BaseController {
 	 */
 	public function store()
 	{
-		$validation = Answer::validate(Input::all());
+		$validation = $this->answer->validate(Input::all());
 
 		$question_id = Input::get('question_id');
 		if ($validation->passes()) {
-			Answer::create(array(
+			$this->answer->create(array(
 				'answer' => Input::get('answer'),
 				'question_id' => $question_id,
 				'user_id' => Auth::user()->id

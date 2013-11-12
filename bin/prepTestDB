@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo > app/tests/codeception/_data/db.sqlite
+
+php artisan migrate --seed --database=codeception
+sqlite3 app/tests/codeception/_data/db.sqlite .dump > app/tests/codeception/_data/dump.sql
+
+ls app/tests/codeception/_data

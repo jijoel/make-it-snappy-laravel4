@@ -12,8 +12,7 @@
         </ul>
     @endif
 
-    {{ Form::open(array('url' => route('users.store'), 'method' => 'POST')) }}
-    {{ Form::token() }}
+    {{ Form::open(array('url' => route('users.store'), 'method' => 'POST', 'id'=>'registration')) }}
 
     <p>
         {{ Form::label('username', 'Username') }}<br />

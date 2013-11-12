@@ -1,85 +1,19 @@
 <?php
 
-Class UserTest extends TestCase
+/**
+ * @group functional
+ */
+Class UserTest extends FunctionalTestCase
 {
-	public function testTesterWorks()
-	{
-		$opt = Config::get('app.load_failing_tests');
-		if ($opt) {
-			$this->assertTrue(False);			
-		}
-		$this->assertTrue(True);
-	}
-
-	public function testAuthIdentifierAndPassword()
-	{
-		// before mocking, the AuthIdentifier and AuthPassword should be Null
-		$user = new User;
-		$this->assertNull($user->getAuthIdentifier());
-        $this->assertNull($user->getAuthPassword());
-
-        $user = new User(array('id'=>1, 'username'=>'joel','password'=>'test','email'=>'test@test.com'));
-        $this->be($user);
-        $this->assertEquals(1, $user->getAuthIdentifier());
-        $this->assertEquals('test', $user->getAuthPassword());
-        $this->assertEquals('test@test.com', $user->getReminderEmail());
-	}
-
-    public function testSeededUserCount()
+    public function testRelationships()
     {
-        $this->loadDatabase();
-        $this->assertEquals(3, count(User::all()));
-    }
+        $test = User::find(1);
+        $this->assertCount(2, $test->questions, 'user 1 has 2 questions');
+        $this->assertCount(1, $test->answers, 'user 1 has answered 1 question');
 
-    public function testFindSeededUser()
-    {
-        $this->loadDatabase();
-        $user = User::find(1);
-        $username = $user->username;
-        $this->assertEquals('joel', $username);
-        $this->assertEquals(array('password'), User::find(1)->getHidden());
-
-        $user = User::find(5);
-        $this->assertNull($user);
-    }
-
-    public function testSeededUserQuestions()
-    {
-        $this->loadDatabase();
-        $questions = User::find(1)->questions()->get();
-        $this->assertEquals(2, count($questions));
-
-        $questions = User::find(2)->questions()->get();
-        $this->assertEquals(3, count($questions));
-    }
-
-    public function testSeededUserAnswers()
-    {
-        $this->loadDatabase();
-        $answers = User::find(1)->answers()->get();
-        $this->assertEquals(1, count($answers));
-
-        $answers = User::find(2)->answers()->get();
-        $this->assertEquals(1, count($answers));
-
-        $answers = User::find(3)->answers()->get();
-        $this->assertEquals(0, count($answers));
-    }
-
-    public function testValidate()
-    {
-        $user = new User;
-        $validation = $user->validate(array('username'=>Null));
-        $this->assertFalse($validation->passes());
-        $e = $validation->getMessageBag();
-        $this->assertEquals(3, count($e));
-        // use this to see the actual messages
-        var_dump($e->all(':message'));
-    }
-
-    public function testValidateField()
-    {
-        
+        $test = User::find(3);
+        $this->assertCount(1, $test->questions, 'User 3 has 1 question');
+        $this->assertCount(0, $test->answers, 'user 3 has answered 0 questions');
     }
 
 }

@@ -1,9 +1,13 @@
 <?php
 
-class QuestionController extends BaseController {
+class QuestionController extends BaseController 
+{
+	protected $question;
 
-	public function __construct()
+	public function __construct(Question $question)
 	{
+		$this->question = $question;
+
 		$this->beforeFilter('auth', array(
 			'only' => array(
 				'edit', 
@@ -22,7 +26,7 @@ class QuestionController extends BaseController {
 	{
         return View::make('questions.index')
             ->with('title', 'Make it Snappy Q&A -- Home')
-            ->with('questions', Question::unsolved());
+            ->with('questions', $this->question->unsolved());
  	}
 
  	/**
@@ -33,7 +37,7 @@ class QuestionController extends BaseController {
  		return View::make('questions.your_questions')
  			->with('title', 'Make it Snappy Q&A -- Your Questions')
  			->with('username', Auth::user()->username)
- 			->with('questions', Question::yourQuestions());
+ 			->with('questions', $this->question->yourQuestions());
  	}
 
 
@@ -44,10 +48,10 @@ class QuestionController extends BaseController {
 	 */
 	public function store()
 	{
-		$validation = Question::validate(Input::all());
+		$validation = $this->question->validate(Input::all());
 
 		if ($validation->passes()) {
-			Question::create(array(
+			$this->question->create(array(
 				'question' => Input::get('question'),
 				'user_id' => Auth::user()->id
 			));
@@ -68,7 +72,7 @@ class QuestionController extends BaseController {
 	{
 		return View::make('questions.show')
 			->with('title', 'Make it Snappy - View Question')
-			->with('question', Question::find($id));
+			->with('question', $this->question->find($id));
 	}
 
 	/**
@@ -84,7 +88,7 @@ class QuestionController extends BaseController {
 		}
 		return View::make('questions.edit')
 			->with('title', 'Make it Snappy - Edit Question')
-			->with('question', Question::find($id));		
+			->with('question', $this->question->find($id));		
 	}
 
 
@@ -101,9 +105,9 @@ class QuestionController extends BaseController {
 				->with('message', 'Invalid question');
 		}
 
-		$validation = Question::validate(Input::all());
+		$validation = $this->question->validate(Input::all());
 		if ($validation->passes()) {
-			Question::where('id','=',$id)->update(array(
+			$this->question->where('id','=',$id)->update(array(
 				'question' => Input::get('question'),
 				'solved' => Input::get('solved'),
 			));
@@ -120,7 +124,7 @@ class QuestionController extends BaseController {
 	{
 		return View::make('questions.results')
 			->with('title', 'Make it Snappy - Search Results')
-			->with('questions', Question::search($keyword));
+			->with('questions', $this->question->search($keyword));
 	}
 
 	public function postSearch()
@@ -141,7 +145,7 @@ class QuestionController extends BaseController {
 	 */
 	private function questionBelongsToUser($id)
 	{
-		$question = Question::find($id);
+		$question = $this->question->find($id);
 		$user = Auth::user();
 
 		if (!isset($question) or !isset($user)) {

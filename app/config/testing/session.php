@@ -16,6 +16,6 @@ return array(
 	|
 	*/
 
-	'driver' => 'array',
+	'driver' => 'cookie',   // codecept needs static sessions
 
 );

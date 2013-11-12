@@ -1,55 +1,33 @@
 <?php
 
-class QuestionsTableSeeder extends Seeder {
+class QuestionsTableSeeder extends Seeder 
+{
 
 	public function run()
-	{
-		$questions = array(
-            array(
-                'user_id' => 1,
-                'question' => 'Does this work?',
-                'solved' => 0,
-                'created_at' => new DateTime,
-                'updated_at' => new DateTime
-            ),
-            array(
-                'user_id' => 1,
-                'question' => 'Does it work for solved items?',
-                'solved' => 1,
-                'created_at' => new DateTime,
-                'updated_at' => new DateTime
-            ),
-            array(
-                'user_id' => 2,
-                'question' => 'Do questions from other users work?',
-                'solved' => 0,
-                'created_at' => new DateTime,
-                'updated_at' => new DateTime
-            ),
-            array(
-                'user_id' => 3,
-                'question' => 'How many questions shall I ask?',
-                'solved' => 0,
-                'created_at' => new DateTime,
-                'updated_at' => new DateTime
-            ),
-            array(
-                'user_id' => 2,
-                'question' => 'Do questions work out of order?',
-                'solved' => 0,
-                'created_at' => new DateTime,
-                'updated_at' => new DateTime
-            ),
-            array(
-                'user_id' => 2,
-                'question' => 'Does a solved question show up?',
-                'solved' => 1,
-                'created_at' => new DateTime,
-                'updated_at' => new DateTime
-            ),
-		);
+    {
+        $data = array(
+                //Q, Usr, solved, question
+            array(1, 1, 0, 'Does this work?'),
+            array(2, 1, 1, 'Does it work for solved items?'),
+            array(3, 2, 0, 'Do questions from other users work?'),
+            array(4, 3, 0, 'How many questions shall I ask?'),
+            array(5, 2, 0, 'Do questions work out of order?'),
+            array(6, 2, 1, 'Does a solved question show up?'),
+        );
 
-		DB::table('questions')->insert($questions);
+        $items = array();
+        foreach($data as $item) {
+            $items[] = array(
+                'id'         => $item[0],
+                'user_id'    => $item[1],
+                'solved'     => $item[2],
+                'question'   => $item[3],
+                'created_at' => new DateTime,
+                'updated_at' => new DateTime,
+            );
+        }
+
+        DB::table('questions')->insert($items);
 	}
 
 }

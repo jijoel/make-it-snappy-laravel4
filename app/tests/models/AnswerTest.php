@@ -1,13 +1,15 @@
 <?php
 
-Class AnswerTest extends TestCase
+/**
+ * @group functional
+ */
+Class AnswerTest extends FunctionalTestCase
 {
-	public function testTesterWorks()
-	{
-		$opt = Config::get('app.load_failing_tests');
-		if ($opt) {
-			$this->assertTrue(False);			
-		}
-		$this->assertTrue(True);
-	}
+    public function testRelationships()
+    {
+        $test = Answer::find(1);
+        $this->assertEquals('test1', $test->user->username, 'belongs to seed user');
+        $this->assertEquals('Does this work?', $test->question->question, 
+            'for correct question');
+    }
 }

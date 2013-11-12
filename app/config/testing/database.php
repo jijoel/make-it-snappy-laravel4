@@ -1,17 +1,12 @@
 <?php
-// application/config/testing/database.php
-// from http://forums.laravel.io/viewtopic.php?id=2521
-    
-return array(
 
-    'default' => 'sqlite',
-
+return array( 
+    'default' => 'codeception',
     'connections' => array(
-
-        'sqlite' => array(
+        'codeception' => array(
             'driver'   => 'sqlite',
-            'database' => ':memory:', // this will do the trick ;)
+            'database' => __DIR__.'/../../tests/codeception/_data/db.sqlite',
             'prefix'   => '',
         ),
-    ),
+    )
 );
