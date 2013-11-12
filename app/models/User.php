@@ -12,6 +12,8 @@ implements UserInterface, RemindableInterface //, UserRepositoryInterface
         'password_confirmation' => 'required|between:4,12'
     );
 
+    protected $fillable = array('username', 'password');
+
     /**
      * The database table used by the model.
      *
