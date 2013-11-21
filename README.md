@@ -15,3 +15,5 @@ You'll also want to change the url for codeception tests in `app/tests/codecepti
 
 Run `bin/prepTestDB' to create a database for codeception tests. This will generate the test database, and run migrations and seeds.
 
+Create a database, and setup connection parameters in `app/config/database.php`. If you'd like to do manual testing using the same database that codeception uses (which gets rewritten every time codeception is run), change the default database connection name to `codeception`.
+ 
