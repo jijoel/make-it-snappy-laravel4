@@ -6,6 +6,11 @@ class Answer extends BaseModel
         'answer' => 'required|min:2|max:255'
     );
 
+    protected $fillable = array('user_id', 'question_id', 'answer');
+
+
+// Relationships -------------------------------------------
+
     public function user()
     {
         return $this->belongsTo('User');

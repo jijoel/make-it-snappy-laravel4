@@ -7,6 +7,11 @@ class Question extends BaseModel
         'solved' => 'in:0,1'
     );
 
+    protected $fillable = array('user_id', 'question', 'solved');
+
+
+// Relationships -----------------------------------------
+
     public function user()
     {
         return $this->belongsTo('User');
