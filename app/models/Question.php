@@ -1,10 +1,16 @@
 <?php
 
-class Question extends BaseModel {
+class Question extends BaseModel 
+{
     public static $rules = array(
         'question' => 'required|min:10|max:255',
         'solved' => 'in:0,1'
     );
+
+    protected $fillable = array('user_id', 'question', 'solved');
+
+
+// Relationships -----------------------------------------
 
     public function user()
     {
