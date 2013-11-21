@@ -16,5 +16,4 @@ composer.lock
 /app/config/production
 
 # Codeception
-_*
 *Guy.php

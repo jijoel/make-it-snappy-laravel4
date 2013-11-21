@@ -8,7 +8,7 @@ class AnswerControllerTest extends FunctionalTestCase
 
     public function testStoreSuccess()
     {
-        Redirect::shouldReceive('back->with')->once();
+        Redirect::shouldReceive('route->with')->once();
         $data = array('question_id'=>1, 'answer'=>'foo');
         $this->be(User::find(1));
 
@@ -19,7 +19,7 @@ class AnswerControllerTest extends FunctionalTestCase
     {
         \Validator::shouldReceive('make->passes')
             ->once()->andReturn(False);
-        \Redirect::shouldReceive('back->withErrors->withInput')
+        \Redirect::shouldReceive('route->withErrors->withInput')
             ->once();
 
         $this->call('POST', 'answers');
