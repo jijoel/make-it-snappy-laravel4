@@ -53,7 +53,8 @@ class QuestionController extends BaseController
 		if ($validation->passes()) {
 			$this->question->create(array(
 				'question' => Input::get('question'),
-				'user_id' => Auth::user()->id
+				'user_id' => Auth::user()->id,
+				'solved' => False,
 			));
 			return Redirect::route('home')
 				->with('message', 'Your question has been posted');

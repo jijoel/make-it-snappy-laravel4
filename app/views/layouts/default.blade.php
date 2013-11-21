@@ -12,8 +12,7 @@
         <a href="{{ route('home') }}">Make it Snappy Q&A</a>
             <div id="searchbar">
                 {{ Form::open(array('route'=>'search')) }}
-                {{ Form::token() }}
-                {{ Form::text('keyword', '', array('id'=>'keyword', 'autofocus'=>'True', 'placeholder'=>'Search')) }}
+\                {{ Form::text('keyword', '', array('id'=>'keyword', 'autofocus'=>'True', 'placeholder'=>'Search')) }}
                 {{ Form::submit('Search') }}
                 {{ Form::close() }}
             </div>
