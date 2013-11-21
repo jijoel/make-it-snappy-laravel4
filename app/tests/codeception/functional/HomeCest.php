@@ -104,15 +104,57 @@ class HomeCest
         $I->click('Logout');
     }
     
-    public function testAddItem(TestGuy $I) 
+    public function testAskQuestion(TestGuy $I) 
     {
-        // $I->am('a tester');
-        // $I->wantTo('add a todo');
+        $this->doLogin($I);
 
-        // $I->amOnPage('/');
-        // $I->dontSeeInDatabase('todos', array('name'=>'new todo'));
-        // $I->submitForm('#new-todo-form', array('new'=>'new todo'));
-        // $I->seeInDatabase('todos', array('name'=>'new todo'));    
+        $I->am('a tester');
+        $I->wantTo('ask a question');
+
+        $I->amOnPage('/');
+        $I->dontSeeInDatabase('questions', array('question'=>'some new question'));
+        $I->submitForm('#ask form', array('question'=>'some new question'));
+        $I->seeInDatabase('questions', array('question'=>'some new question'));    
+        $this->doLogout($I);
     }
 
+    public function testAnswerQuestion(TestGuy $I) 
+    {
+        $this->doLogin($I);
+
+        $I->am('a tester');
+        $I->wantTo('answer a question');
+
+        $I->amOnPage('/');
+        $I->click('Do questions work out of order?');
+        $I->dontSeeInDatabase('answers', array('answer'=>'some new answer'));
+        $I->submitForm('#post-answer form', array('answer'=>'some new answer'));
+        $I->seeInDatabase('answers', array('answer'=>'some new answer'));    
+        $this->doLogout($I);
+    }
+
+    public function testListMyQuestions(TestGuy $I)
+    {
+        $this->doLogin($I);
+        $I->amOnPage('/');
+        $I->click('Your Q\'s');
+        $I->seeInCurrentUrl('your-questions');
+        $I->see('Joel Questions', 'h1');
+        $I->see('Does this work?', 'li');
+        $this->doLogout($I);
+    }
+
+    public function doLogout(TestGuy $I)
+    {
+        $I->amOnPage('/logout');
+    }
+
+    protected function doLogin(TestGuy $I, $login='joel', $pw='test')
+    {
+        $I->amOnPage('/login');
+        $I->submitForm('#content form', array(
+            'username'=>$login,
+            'password'=>$pw,
+        ));
+    }
 }

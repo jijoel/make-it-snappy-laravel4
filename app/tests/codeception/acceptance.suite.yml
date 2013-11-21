@@ -16,5 +16,5 @@ modules:
         - Db
     config:
         Selenium2:
-            url: 'http://lkata/'
+            url: 'http://mini.dev/'
             browser: 'phantomjs'
